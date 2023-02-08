@@ -1,3 +1,0 @@
-# vite-template
-
-this is a personal react-vite template used as base for my projects...
