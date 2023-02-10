@@ -1,7 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      mobile: '375px',
+      tablet: '768px',
+      desktop: '1440px',
+    },
     extend: {
       colors: {
         'primary-blue': '#0079FF',
@@ -11,6 +19,9 @@ module.exports = {
         'neutral-gray': '#F6F8FF',
         'neutral-dark-blue-900': '#141D2F',
         'neutral-dark-blue-700': '1E2A47',
+      },
+      fontFamily: {
+        'space-mono': ['Space Mono', ...defaultTheme.fontFamily.sans],
       },
     },
   },
