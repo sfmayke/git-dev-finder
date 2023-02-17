@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 1.9375rem;
+  padding-inline: 1.5rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleTheme {
+  display: flex;
+}
+
+.search {
+  padding-top: 2rem;
+}
+
+.card {
+  padding-top: 1rem;
+}

@@ -18,6 +18,9 @@ module.exports = {
         'neutral-dark-blue-900': '#141D2F',
         'neutral-dark-blue-700': '1E2A47',
       },
+      boxShadow: {
+        custom: '0px 16px 30px -10px rgba(70, 96, 187, 0.198567)',
+      },
       fontFamily: {
         'space-mono': ['Space Mono', ...defaultTheme.fontFamily.sans],
       },
