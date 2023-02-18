@@ -1,6 +1,8 @@
 import moonIcon from '../assets/icon-moon.svg';
 import sunIcon from '../assets/icon-sun.svg';
-import { useThemeContext } from '../context/ThemeContext';
+import { useThemeContext } from '../context/ThemeContext.server';
+
+console.log('server --- ?', typeof window === 'undefined');
 
 export default function Header() {
   const { theme, themeToggle } = useThemeContext();

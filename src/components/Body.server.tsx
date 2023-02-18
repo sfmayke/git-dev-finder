@@ -1,6 +1,18 @@
-import { CompanyIcon, TwitterIcon, LocationIcon, WebsiteIcon } from './Icons';
+import { useQuery } from 'react-query';
+import getUser from '../service/getGitUser';
+import {
+  CompanyIcon,
+  TwitterIcon,
+  LocationIcon,
+  WebsiteIcon,
+} from './Icons.server';
 
 export default function Body() {
+  const { data, isLoading } = useQuery('gitUserData', getUser);
+
+  if (isLoading) return <>Loading...</>;
+  if (!isLoading) console.log(data);
+
   return (
     <div className="mt-4 flex flex-col items-start rounded-2xl bg-white px-6 pt-8 pb-[42px] shadow-custom dark:bg-neutral-dark-blue-700">
       <div className="flex gap-5">
