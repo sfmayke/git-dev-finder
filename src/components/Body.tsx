@@ -1,9 +1,4 @@
-import {
-  CompanyIcon,
-  TwitterIcon,
-  LocationIcon,
-  WebsiteIcon,
-} from './Icons/CompanyIcon';
+import { CompanyIcon, TwitterIcon, LocationIcon, WebsiteIcon } from './Icons';
 
 export default function Body() {
   return (
