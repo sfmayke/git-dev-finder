@@ -6,9 +6,9 @@ export default function Header() {
   const { theme, themeToggle } = useThemeContext();
   return (
     <div className="flex items-center justify-between">
-      <h1 className="text-[#222731]">devfinder</h1>
+      <h1 className="text-[#222731] dark:text-white">devfinder</h1>
       <div className="flex gap-4">
-        <h4 className="font-bold uppercase tracking-[2.5px] text-secondary-blue">
+        <h4 className="font-bold uppercase tracking-[2.5px] text-secondary-blue dark:text-white">
           {theme === 'dark' ? 'light' : 'dark'}
         </h4>
         <button type="button" onClick={themeToggle}>
