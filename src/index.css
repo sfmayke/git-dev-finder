@@ -45,5 +45,5 @@ html {
 }
 
 body {
-  @apply bg-neutral-gray;
+  @apply bg-neutral-gray dark:bg-pink-600;
 }

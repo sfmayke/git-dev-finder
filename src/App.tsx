@@ -1,19 +1,18 @@
-import Header from './components/Header'
-import Search from './components/Search'
+import Body from './components/Body';
+import Header from './components/Header';
+import Search from './components/Search';
+import ThemeProvider from './context/ThemeContext';
 
 function App() {
   return (
-    <div className="flex flex-col px-6 pt-[1.9375rem]">
-      <Header />
-      <Search />
-      <div className="mt-4 bg-white">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+    <ThemeProvider>
+      <div className="flex flex-col px-6 pt-[1.9375rem]">
+        <Header />
+        <Search />
+        <Body />
       </div>
-    </div>
-  )
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;

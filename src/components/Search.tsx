@@ -1,4 +1,4 @@
-import searchIcon from '../assets/icon-search.svg'
+import searchIcon from '../assets/icon-search.svg';
 
 export default function Search() {
   return (
@@ -11,10 +11,10 @@ export default function Search() {
       />
       <button
         type="button"
-        className="rounded-xl bg-primary-blue px-4 py-3 font-bold text-white"
+        className="rounded-xl bg-primary-blue px-4 py-3 font-bold capitalize text-white"
       >
         search
       </button>
     </div>
-  )
+  );
 }
