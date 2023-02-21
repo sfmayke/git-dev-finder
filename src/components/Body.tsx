@@ -1,6 +1,6 @@
 import moment from 'moment';
 import { UserData } from '../service/getGitUser';
-import Links from './Links.serve';
+import Links from './Links';
 
 export default function Body({ userData }: { userData: UserData }) {
   const links = (({ company, location, twitter_username, blog }: UserData) => ({

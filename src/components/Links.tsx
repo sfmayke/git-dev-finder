@@ -1,10 +1,5 @@
 import { UserData } from '../service/getGitUser';
-import {
-  CompanyIcon,
-  LocationIcon,
-  TwitterIcon,
-  WebsiteIcon,
-} from './Icons.server';
+import { CompanyIcon, LocationIcon, TwitterIcon, WebsiteIcon } from './Icons';
 
 const iconDic = {
   location: (className: string) => <LocationIcon className={className} />,

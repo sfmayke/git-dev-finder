@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
-import Body from './components/Body.server';
-import Header from './components/Header.server';
-import Search from './components/Search.server';
-import ThemeProvider from './context/ThemeContext.server';
+import Body from './components/Body';
+import Header from './components/Header';
+import Search from './components/Search';
+import ThemeProvider from './context/ThemeContext';
 import getGitUser, { UserData } from './service/getGitUser';
 
 function App() {
