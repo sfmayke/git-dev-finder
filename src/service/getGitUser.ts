@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 interface IObjectKeys {
   [key: string]: string | undefined | number | Date;
 }
@@ -17,7 +19,15 @@ export interface UserData extends IObjectKeys {
   created_at?: Date;
 }
 
-const getGitUser = (name: string): Promise<UserData> =>
-  fetch(`https://api.github.com/users/${name}`).then((res) => res.json());
+const getGitUser = async (name: string) =>
+  (
+    await axios.get(`https://api.github.com/users/${name}`, {
+      headers: {
+        Accept: 'application/vnd.github+json',
+        Authorization:
+          'Bearer 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',
+      },
+    })
+  ).data;
 
 export default getGitUser;

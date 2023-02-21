@@ -1,24 +1,31 @@
-import { useCallback, useState } from 'react';
-import { useQuery } from 'react-query';
+import { useCallback, useEffect, useState } from 'react';
 import Body from './components/Body.server';
 import Header from './components/Header.server';
 import Search from './components/Search.server';
 import ThemeProvider from './context/ThemeContext.server';
-import getGitUser from './service/getGitUser';
+import getGitUser, { UserData } from './service/getGitUser';
 
 function App() {
   const [userName, setUserName] = useState('octocat');
-  const { data } = useQuery(['gitUserData', userName], () =>
+  const [error, setError] = useState();
+  const [data, setdata] = useState<UserData | undefined>(undefined);
+
+  useEffect(() => {
     getGitUser(userName)
-  );
+      .then((res) => {
+        setdata(res);
+        setError(undefined);
+      })
+      .catch((e) => setError(e));
+  }, [userName]);
 
   const changeUser = useCallback((name: string) => setUserName(name), []);
 
   return (
     <ThemeProvider>
-      <div className="flex flex-col px-6 pt-[1.9375rem]">
+      <div className="flex flex-col px-6 pt-[1.9375rem] desktop:w-[730px] desktop:p-0">
         <Header />
-        <Search changeUserName={changeUser} />
+        <Search error={!!error} changeUserName={changeUser} />
         {data && <Body userData={data} />}
       </div>
     </ThemeProvider>

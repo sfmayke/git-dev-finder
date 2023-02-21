@@ -38,8 +38,8 @@ export default function Links({ links }: Props) {
           <h4
             className={`${
               value
-                ? 'text-secondary-blue dark:text-white'
-                : 'text-secondary-blue/50 dark:text-white/50'
+                ? 'text-secondary-blue dark:text-white tablet:text-base'
+                : 'text-secondary-blue/50 dark:text-white/50 tablet:text-base'
             } `}
           >
             {value || 'Not Available'}
