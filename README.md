@@ -8,11 +8,11 @@
   
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/sfmayke/git-dev-finder">
   
-  <a href="https://github.com/sfmayke/expenses-chart-component-main/commits/main">
+  <a href="https://github.com/sfmayke/git-dev-finder/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/sfmayke/git-dev-finder">
   </a>
 
-  <a href="https://github.com/sfmayke/expenses-chart-component-main/issues">
+  <a href="https://github.com/sfmayke/git-dev-finder/issues">
     <img alt="Repository issues" src="https://img.shields.io/github/issues/sfmayke/git-dev-finder">
   </a>
 
